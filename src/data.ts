@@ -210,67 +210,51 @@ export const TIMELINE_BUILD_DATA: TimelineNode[] = [
 
 export const PORTFOLIO_PROJECTS_DATA: ProjectItem[] = [
   {
-    id: 'proj-1',
-    title: '大型連鎖零售企業：AI 智能客服與多通路自動化進銷存工作流',
-    category: 'AI 整合與自動化',
-    summary: '串聯跨通路（LINE、官網、IG訊息）全通路客服。對接企業 Ragic 進銷存，當 AI 精準辨別退貨或下訂，後台自動執行銷庫，扣款、寄信出貨，降低 70% 真人行政對账損耗。',
-    tools: ['Gemini Pro API', 'Ragic ERP', 'Make (Integromat)', 'LINE Bott'],
+    id: 'demo-enterprise-system',
+    title: '企業智能管理系統 Demo',
+    category: '企業系統建置',
+    summary: '以企業後台管理為核心，展示客戶資料、流程控管、狀態追蹤與營運資料整合的系統雛形。適合用於 CRM、進銷存、專案管理、內部審核與多部門協作場景，讓企業從零散表格轉向可視化管理。',
+    tools: ['Vite', 'React', 'Tailwind CSS', 'Dashboard UI', 'Ragic Concept'],
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop'
   },
   {
-    id: 'proj-2',
-    title: '生技製藥大廠：Ragic 客製化研發專案與 CRM 安全防護合約系統',
-    category: '企業系統建置',
-    summary: '將過往散落在各工程師硬碟、Excel 的十萬筆藥檢實驗與合約，重組成多權限階梯式、嚴密記錄修史軌跡的 Ragic 企業雲端系統，研發進度一鍵看清。',
-    tools: ['Ragic ERP', 'Node.js', 'AWS Dynamic Encryption', 'OAuth Secure'],
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'proj-3',
-    title: '高端跨國設計家居：沉浸式語意 3D 品牌官網與響應式前台系統',
-    category: '網站與平台',
-    summary: '為精品家具商打造高規格 3D 互動官網，融入物理引擎讓家具可 360 度拉曳，全站以暗黑極簡拉絲銀與電光藍搭配，加載速度低於 1.2 秒。',
-    tools: ['Vite', 'Three.js', 'Tailwind CSS', 'Framer Motion'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'proj-4',
-    title: '跨國高階醫學教育學會：LMS 加密型線上數位講堂平台',
+    id: 'demo-lms-platform',
+    title: '智慧學習平台 Demo',
     category: 'LMS 線上課程',
-    summary: '針對專業醫師的高級法規授課，建置防錄、防截、綁定裝置隨機浮水印的 LMS 線上影音學院。系統內置高自定義題庫與通過後自動簽發防偽證書功能。',
-    tools: ['WordPress Learner', 'Stripe API', 'Wistia API', 'JW Player Secure'],
+    summary: '展示線上課程平台、教師管理、課程內容、會員學習與數位教學入口的規劃方向。適合教育品牌、講師平台、企業內訓與知識付費型服務，用於建立可營運的線上學習系統。',
+    tools: ['Vite', 'React', 'Tutor LMS Concept', 'Course UI', 'Member System'],
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'
   },
   {
-    id: 'proj-5',
-    title: '跨國科技顧問所：台灣大都圈 GEO 地圖商家群與多層語意 SEO 優化',
-    category: 'SEO / GEO',
-    summary: '規劃台灣六大都會區地圖，大幅拉升品牌關鍵字在 Google 地圖上的權重；配合全站 20 篇深度語意科普文，讓自然進站點擊流量於短期間内取得爆發性成長。',
-    tools: ['Google Map Schema', 'GEO Optimization', 'Ahrefs Strategy', 'Semantic Writing'],
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'proj-6',
-    title: '頂級高端醫美連鎖集團：AI 落地顧問與數位資產整合戰略',
-    category: '品牌與顧問',
-    summary: '協助該連鎖集團規劃自有的日常行銷素材產出流程，舉辦 4 次全體高管實兵工作坊，成功將原本需要一週編寫的的文案與分鏡，利用 AI 降低到 30 分鐘。',
-    tools: ['Consultation Workshop', 'ChatGPT Matrix', 'Midjourney Prompt Book', 'Dachuang Guide'],
+    id: 'demo-ai-workflow',
+    title: 'AI 智能工作流 Demo',
+    category: 'AI 整合與自動化',
+    summary: '以 AI 流程引擎為核心，展示企業如何將重複性行政、客服、資料整理、通知與任務分派整合成自動化工作流。適合想導入 AI Agent、自動提醒、跨平台串接與流程降耗的企業。',
+    tools: ['AI Workflow', 'Automation Concept', 'Make / Zapier Logic', 'React', 'Tailwind CSS'],
     image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop'
   },
   {
-    id: 'proj-7',
-    title: '智慧家居設備原廠：AI 行政助理群與跨國單據自動辨識串接系統',
-    category: 'AI 整合與自動化',
-    summary: '開發可直接對接雲端信箱的 PDF 提取 Agent，自動擷取國外經銷商寄來的 Invoice 單據，無痛清洗匯入 Ragic 會計總帳，消滅 95% 年終人工對單眼花情況。',
-    tools: ['Gemini 2.5 API', 'Google Cloud Functions', 'Ragic Accountant'],
+    id: 'demo-ai-media',
+    title: 'AI 數位人與短影音 Demo',
+    category: 'AI 內容與影音',
+    summary: '展示 AI 數位人、照片說話、短影音腳本、產品介紹與品牌內容生成的應用方向。適合需要大量內容產出、品牌曝光、教育訓練影片、社群短影音與無真人出鏡方案的客戶。',
+    tools: ['AI Avatar', 'Short Video', 'Script Planning', 'Content Matrix', 'Brand Media'],
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop'
   },
   {
-    id: 'proj-8',
-    title: '大型創新聯合法律智權所：自動案控分配與 CRM 商機管線系統',
-    category: '企業系統建置',
-    summary: '串聯法律諮詢問卷，AI 解構申訴大意後自動推薦主辦範疇律師，並以 LINE 提醒推播。系統自動跟進法諮後轉案流程，讓法律智權案量轉化率暴增 40%。',
-    tools: ['Ragic Lawyers Mod', 'Zapier Actions', 'LINE Notify', 'Chart.js View'],
-    image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=800&auto=format&fit=crop'
+   id: 'demo-seo-geo',
+    title: 'SEO / GEO 搜尋曝光 Demo',
+    category: 'SEO / GEO',
+    summary: '展示品牌如何透過 SEO 結構、GEO 地圖曝光、Google 商家優化與 AI 搜尋語意佈局，提高被搜尋、被看見、被信任的機會。適合需要自然搜尋流量、在地曝光與品牌搜尋資產的企業。',
+    tools: ['SEO Strategy', 'GEO Optimization', 'Google Business Profile', 'Semantic Content', 'Search Growth'],
+    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'demo-official-website',
+    title: '達創智能科技 AI 官方網站',
+    category: '品牌官網與平台',
+    summary: '達創官方品牌官網，整合 Galaxy 科技視覺、品牌 Logo、服務模組、作品集入口、AI 顧問定位與需求表單。此案同時作為達創對外展示品牌風格、服務能力與客製網站設計能力的代表作品。',
+    tools: ['Vite', 'React', 'Tailwind CSS', 'Galaxy Background', 'Brand Website'],
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop'
   }
 ];
