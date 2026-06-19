@@ -790,12 +790,12 @@ export default function App() {
                   </div>
                   
                   <h3 className="font-display font-semibold text-2xl md:text-3xl text-text-main">
-                    智能需求接收成功 / RECON SUBMITTED
-                  </h3>
-                  
-                  <p className="font-sans text-sm md:text-base text-text-muted mt-3 max-w-lg mx-auto leading-relaxed">
-                    精準系統終端已錄入您的詢問檔案。達創核心顧問將於一個工作天內、依據您勾選的智能模組方案進行沙盒模擬盤點，並主動聯絡您。
-                  </p>
+  需求已送出 / CONSULT REQUEST RECEIVED
+</h3>
+
+<p className="font-sans text-sm md:text-base text-text-muted mt-3 max-w-lg mx-auto leading-relaxed">
+  感謝您留下需求。達創智能科技將依照您填寫的服務項目與現況說明，初步評估適合的導入方向，並由顧問窗口主動與您聯繫。
+</p>
 
                   <div className="mt-10 border-t border-white/[0.04] pt-8 font-mono text-xs text-text-muted">
                     <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto text-left">
@@ -808,7 +808,7 @@ export default function App() {
                     onClick={resetForm}
                     className="cursor-target mt-8 px-6 py-2.5 rounded border border-brand-silver/20 text-xs font-mono text-text-muted hover:border-electric-blue hover:text-electric-blue transition-all"
                   >
-                    重組另一個需求表單 // WRITE NEW
+                    重新填寫需求 // WRITE NEW
                   </button>
                 </div>
               ) : (
@@ -822,10 +822,10 @@ export default function App() {
                       </span>
                     </div>
                     <h2 className="font-display font-medium text-2xl md:text-3.5xl text-text-main tracking-tight leading-snug">
-                      準備啟動你的智能系統？
+                      準備讓你的品牌與系統開始升級？
                     </h2>
                     <p className="font-sans text-xs md:text-sm text-text-muted mt-2 max-w-lg leading-relaxed">
-                      如果你的企業正卡在流程、網站、系統、曝光或 AI 導入，請留下需求。達創協助你從第一個可落地的方案開始。
+                      無論你需要 AI 導入、客製網站、SEO / GEO 搜尋曝光、廣告代操或企業系統建置，都可以先留下需求。達創會依照你的現況，協助評估最適合的第一步。
                     </p>
                   </div>
 
@@ -903,13 +903,15 @@ export default function App() {
                       </label>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {[
-                          'AI 工作智能流 (AI Mode)',
-                          '企業系統核骨 (Sys Mode)',
-                          '品牌官網與平台 (Web Mode)',
-                          '地圖 SEO/GEO (Search Mode)',
-                          '廣告行銷整合 (Market Mode)',
-                          'AI 數位人短片 (Content Mode)',
-                        ].map((interest) => {
+  'AI 顧問導入',
+  '企業系統建置',
+  '客製品牌官網',
+  'SEO / GEO 搜尋曝光',
+  'Google Ads / Meta 廣告代操',
+  'Google 商家 / G2 驗證',
+  'LINE 官方帳號 / 自動化流程',
+  'AI 數位人與短影音',
+].map((interest) => {
                           const checked = formData.needs.includes(interest);
                           return (
                             <button
@@ -958,12 +960,73 @@ export default function App() {
               )}
 
             </div>
+                   </section>
+
+          {/* SECTION 09: LOCATION MAP */}
+          <section
+            id="location"
+            className="relative py-20 md:py-28 bg-brand-bg border-t border-brand-silver/5 overflow-hidden"
+          >
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-electric-blue/[0.04] rounded-full blur-[130px] pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto px-5 md:px-10 relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <div className="lg:col-span-4">
+                  <div className="inline-flex items-center gap-2 mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-electric-blue shadow-[0_0_8px_#00A3FF]" />
+                    <span className="font-mono text-xs tracking-widest text-electric-blue uppercase">
+                      LOCATION NODE // 服務據點
+                    </span>
+                  </div>
+
+                  <h2 className="font-display font-medium text-2xl md:text-3.5xl text-text-main tracking-tight leading-snug">
+                    達創智能科技<br />服務據點
+                  </h2>
+
+                  <div className="mt-5 space-y-2 font-sans text-sm text-text-muted leading-relaxed">
+                    <p>
+                      <span className="text-text-main font-medium">服務據點｜</span>
+                      台中南屯
+                    </p>
+                    <p>
+                      <span className="text-text-main font-medium">地址｜</span>
+                      台中市南屯區忠勇路107-11號1樓
+                    </p>
+                    <p>
+                      <span className="text-text-main font-medium">聯絡窗口｜</span>
+                      彭俊達｜總監
+                    </p>
+                    <p>
+                      <span className="text-text-main font-medium">電話｜</span>
+                      0965-607-101
+                    </p>
+                    <p>
+                      <span className="text-text-main font-medium">信箱｜</span>
+                      nh071788@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-8">
+                  <div className="rounded-2xl overflow-hidden border border-electric-blue/20 bg-brand-bg-dark shadow-[0_0_45px_rgba(0,163,255,0.12)]">
+                    <iframe
+                      title="達創智能科技 AI 服務據點地圖"
+                      src="https://www.google.com/maps?q=台中市南屯區忠勇路107-11號1樓&output=embed"
+                      className="w-full h-[360px] md:h-[460px] grayscale contrast-125 opacity-85"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </section>
 
         </main>
       )}
-
-      {/* FOOTER DIVISION BAR */}
+            {/* FOOTER DIVISION BAR */}
       <footer
         id="applet-footer"
         className="bg-brand-bg border-t border-brand-silver/5 py-10 relative z-10"
@@ -979,10 +1042,14 @@ export default function App() {
             </span>
           </div>
 
-          <div className="font-mono text-[11px] text-text-muted text-center md:text-right">
-            <span>© {new Date().getFullYear()} DACHUANG CO. ALL RIGHTS INTEGRATED. </span>
-            <span className="block mt-1 text-[9px] text-white/10">CORE_MODULES // AI_SYSTEM_ONLINE_STABLE</span>
+          <div className="font-sans text-[12px] text-text-muted text-center md:text-right leading-relaxed">
+            <div>彭俊達｜總監　0965-607-101　nh071788@gmail.com</div>
+            <div>服務據點｜台中南屯　台中市南屯區忠勇路107-11號1樓</div>
+            <div className="font-mono text-[10px] text-white/20 mt-1">
+              © {new Date().getFullYear()} DACHUANG AI. ALL RIGHTS RESERVED.
+            </div>
           </div>
+
         </div>
       </footer>
 
