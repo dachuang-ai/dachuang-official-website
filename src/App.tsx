@@ -133,7 +133,7 @@ export default function App() {
             {/* Glowing sweep line */}
             <div className="scan-line" />
 
-            <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10 w-full">
+            <div className="max-w-[1680px] mx-auto px-6 md:px-12 xl:px-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10 w-full">
               
               {/* Right Column: Dachuang Brand Logo with System Boot Anim & Cyber Effects */}
               <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center items-center">
@@ -149,12 +149,12 @@ export default function App() {
                   <div className="absolute -bottom-12 right-1/4 w-[1px] h-24 bg-gradient-to-t from-electric-blue/30 to-transparent pointer-events-none" />
 
                   {/* Logo frame container with object-fit: contain */}
-                  <div className="relative z-10 w-[78vw] max-w-[360px] lg:w-[480px] xl:w-[560px] 2xl:w-[620px] aspect-square rounded-2xl bg-[#03060A]/60 border border-white/[0.03] backdrop-blur-md shadow-[0_0_40px_rgba(0,163,255,0.06)] overflow-hidden flex items-center justify-center group hover:border-electric-blue/25 hover:shadow-[0_0_55px_rgba(0,163,255,0.16)] transition-all duration-700 animate-system-boot">
+                  <div className="relative z-10 w-[82vw] max-w-[420px] lg:w-[520px] xl:w-[620px] 2xl:w-[700px] aspect-square rounded-2xl bg-[#03060A]/55 border border-electric-blue/10 backdrop-blur-md shadow-[0_0_55px_rgba(0,163,255,0.12)] overflow-hidden flex items-center justify-center group hover:border-electric-blue/30 hover:shadow-[0_0_70px_rgba(0,163,255,0.22)] transition-all duration-700 animate-system-boot">
                     
                     <img 
                       src={brandLogo} 
                       alt="達創智能科技 AI 官方品牌 Logo" 
-                      className="w-full h-full object-contain p-4 md:p-6 select-none pointer-events-none transition-transform duration-700 group-hover:scale-102"
+                     className="w-full h-full object-contain p-2 md:p-4 select-none pointer-events-none transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
                     />
 
@@ -171,12 +171,12 @@ export default function App() {
                   DACHUANG SYSTEM ONLINE // 智能系統入口
                 </div>
 
-                <h1 className="font-display font-semibold text-3.5xl sm:text-4.5xl md:text-5.5xl lg:text-6xl text-text-main tracking-tight leading-tight md:leading-[1.12]">
-                  達創智能科技
-                  <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-electric-blue via-[#468DFE] to-brand-silver">
-                    智能科技 AI
-                  </span>
-                </h1>
+                <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-main tracking-tight leading-tight md:leading-[1.08]">
+  達創智能科技 AI
+  <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-electric-blue via-[#468DFE] to-brand-silver">
+    Google × AI 搜尋成長入口
+  </span>
+</h1>
 
                 {/* Subtitle with proper line formatting */}
                 <p className="font-sans text-base md:text-[19px] text-text-main mt-6 max-w-xl leading-relaxed mx-auto lg:mx-0 font-medium opacity-95">
