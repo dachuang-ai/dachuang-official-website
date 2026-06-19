@@ -215,7 +215,8 @@ export const PORTFOLIO_PROJECTS_DATA: ProjectItem[] = [
     category: '企業系統建置',
     summary: '以企業後台管理為核心，展示客戶資料、流程控管、狀態追蹤與營運資料整合的系統雛形。適合用於 CRM、進銷存、專案管理、內部審核與多部門協作場景，讓企業從零散表格轉向可視化管理。',
     tools: ['Vite', 'React', 'Tailwind CSS', 'Dashboard UI', 'Ragic Concept'],
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop',
+    demoUrl: 'https://enterprise-system-demo.vercel.app'
   },
   {
     id: 'demo-lms-platform',
@@ -223,7 +224,8 @@ export const PORTFOLIO_PROJECTS_DATA: ProjectItem[] = [
     category: 'LMS 線上課程',
     summary: '展示線上課程平台、教師管理、課程內容、會員學習與數位教學入口的規劃方向。適合教育品牌、講師平台、企業內訓與知識付費型服務，用於建立可營運的線上學習系統。',
     tools: ['Vite', 'React', 'Tutor LMS Concept', 'Course UI', 'Member System'],
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop',
+    demoUrl: 'https://lms-platform-demo.vercel.app'
   },
   {
     id: 'demo-ai-workflow',
@@ -231,7 +233,8 @@ export const PORTFOLIO_PROJECTS_DATA: ProjectItem[] = [
     category: 'AI 整合與自動化',
     summary: '以 AI 流程引擎為核心，展示企業如何將重複性行政、客服、資料整理、通知與任務分派整合成自動化工作流。適合想導入 AI Agent、自動提醒、跨平台串接與流程降耗的企業。',
     tools: ['AI Workflow', 'Automation Concept', 'Make / Zapier Logic', 'React', 'Tailwind CSS'],
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop',
+    demoUrl: 'https://ai-workflow-demo-ebon.vercel.app'
   },
   {
     id: 'demo-ai-media',
@@ -239,15 +242,17 @@ export const PORTFOLIO_PROJECTS_DATA: ProjectItem[] = [
     category: 'AI 內容與影音',
     summary: '展示 AI 數位人、照片說話、短影音腳本、產品介紹與品牌內容生成的應用方向。適合需要大量內容產出、品牌曝光、教育訓練影片、社群短影音與無真人出鏡方案的客戶。',
     tools: ['AI Avatar', 'Short Video', 'Script Planning', 'Content Matrix', 'Brand Media'],
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop',
+    demoUrl: 'https://ai-media-demo.vercel.app'
   },
   {
-   id: 'demo-seo-geo',
+    id: 'demo-seo-geo',
     title: 'SEO / GEO 搜尋曝光 Demo',
     category: 'SEO / GEO',
     summary: '展示品牌如何透過 SEO 結構、GEO 地圖曝光、Google 商家優化與 AI 搜尋語意佈局，提高被搜尋、被看見、被信任的機會。適合需要自然搜尋流量、在地曝光與品牌搜尋資產的企業。',
     tools: ['SEO Strategy', 'GEO Optimization', 'Google Business Profile', 'Semantic Content', 'Search Growth'],
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop',
+    demoUrl: 'https://seo-geo-demo.vercel.app'
   },
   {
     id: 'demo-official-website',
@@ -255,6 +260,7 @@ export const PORTFOLIO_PROJECTS_DATA: ProjectItem[] = [
     category: '品牌官網與平台',
     summary: '達創官方品牌官網，整合 Galaxy 科技視覺、品牌 Logo、服務模組、作品集入口、AI 顧問定位與需求表單。此案同時作為達創對外展示品牌風格、服務能力與客製網站設計能力的代表作品。',
     tools: ['Vite', 'React', 'Tailwind CSS', 'Galaxy Background', 'Brand Website'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop',
+    demoUrl: 'https://dachuang-official-website-npie.vercel.app'
   }
 ];

@@ -30,6 +30,7 @@ export interface ProjectItem {
   summary: string;
   tools: string[];
   image: string;
+  demoUrl?: string;
 }
 
 export interface TimelineNode {

@@ -109,66 +109,80 @@ export default function PortfolioPage({ navigateTo, onContactClick }: PortfolioP
         </div>
 
         {/* SECTION 3: Main Active Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-          {filteredProjects.map((proj) => (
-            <div
-              key={proj.id}
-              className="group glass-card glass-card-hover rounded-xl flex flex-col justify-between overflow-hidden cursor-target"
-              onClick={() => setSelectedProject(proj)}
-            >
-              {/* Cover visual with scaling */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-white/[0.04]">
-                <img
-                  src={proj.image}
-                  alt={proj.title}
-                  className="w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg-dark via-transparent to-transparent opacity-60" />
-                
-                {/* Float Category Label */}
-                <div className="absolute top-4 left-4 bg-brand-bg-dark/80 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded text-[10px] font-mono text-electric-blue uppercase">
-                  {proj.category}
-                </div>
-              </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+  {filteredProjects.map((proj) => (
+    <div
+      key={proj.id}
+      className="group glass-card glass-card-hover rounded-xl flex flex-col justify-between overflow-hidden cursor-target"
+      onClick={() => setSelectedProject(proj)}
+    >
+      {/* Cover visual with scaling */}
+      <div className="relative aspect-[16/10] overflow-hidden bg-slate-950 border-b border-white/[0.04]">
+        <img
+          src={proj.image}
+          alt={proj.title}
+          className="w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg-dark via-transparent to-transparent opacity-60" />
 
-              {/* Text Area */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="font-display font-medium text-lg md:text-xl text-text-main line-clamp-2 leading-snug group-hover:text-electric-blue transition-colors duration-300">
-                    {proj.title}
-                  </h3>
-                  
-                  <p className="font-sans text-xs md:text-[14px] text-text-muted mt-3 line-clamp-3 leading-relaxed">
-                    {proj.summary}
-                  </p>
-                </div>
-
-                {/* Tags and Action */}
-                <div className="mt-6 pt-5 border-t border-white/[0.04]">
-                  {/* Tool chips */}
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {proj.tools.slice(0, 3).map((t, idx) => (
-                      <span key={idx} className="font-mono text-[9px] text-[#A6C0FE] bg-[#A6C0FE]/5 px-2 py-0.5 rounded border border-[#A6C0FE]/10">
-                        {t}
-                      </span>
-                    ))}
-                    {proj.tools.length > 3 && (
-                      <span className="font-mono text-[9px] text-text-muted bg-white/5 px-2 py-0.5 rounded">
-                        +{proj.tools.length - 3}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex items-center justify-between text-xs font-mono font-medium text-electric-blue group-hover:translate-x-1 transition-transform duration-300">
-                    <span>檢視架構細節 SYSTEM ARCH //</span>
-                    <ArrowUpRight className="w-4 h-4 text-electric-blue shrink-0" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Float Category Label */}
+        <div className="absolute top-4 left-4 bg-brand-bg-dark/80 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded text-[10px] font-mono text-electric-blue uppercase">
+          {proj.category}
         </div>
+      </div>
+
+      {/* Text Area */}
+      <div className="p-6 flex-1 flex flex-col justify-between">
+        <div>
+          <h3 className="font-display font-medium text-lg md:text-xl text-text-main line-clamp-2 leading-snug group-hover:text-electric-blue transition-colors duration-300">
+            {proj.title}
+          </h3>
+
+          <p className="font-sans text-xs md:text-[14px] text-text-muted mt-3 line-clamp-3 leading-relaxed">
+            {proj.summary}
+          </p>
+        </div>
+
+        {/* Tags and Action */}
+        <div className="mt-6 pt-5 border-t border-white/[0.04]">
+          {/* Tool chips */}
+          <div className="flex flex-wrap gap-1.5 mb-5">
+            {proj.tools.slice(0, 3).map((t, idx) => (
+              <span
+                key={idx}
+                className="font-mono text-[9px] text-[#A6C0FE] bg-[#A6C0FE]/5 px-2 py-0.5 rounded border border-[#A6C0FE]/10"
+              >
+                {t}
+              </span>
+            ))}
+            {proj.tools.length > 3 && (
+              <span className="font-mono text-[9px] text-text-muted bg-white/5 px-2 py-0.5 rounded">
+                +{proj.tools.length - 3}
+              </span>
+            )}
+          </div>
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              if (proj.demoUrl) {
+                window.open(proj.demoUrl, '_blank', 'noopener,noreferrer');
+              } else {
+                setSelectedProject(proj);
+              }
+            }}
+            className="w-full flex items-center justify-between text-xs font-mono font-medium text-electric-blue group-hover:translate-x-1 transition-transform duration-300 text-left"
+          >
+            <span>{proj.demoUrl ? '查看 Demo LIVE DEMO //' : '檢視架構細節 SYSTEM ARCH //'}</span>
+            <ArrowUpRight className="w-4 h-4 text-electric-blue shrink-0" />
+          </button>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
 
         {/* SECTION 4: Featured Deep Dive Cases */}
         <div className="mb-24 py-16 px-6 md:px-12 bg-white/[0.01] rounded-2xl border border-white/[0.03] relative overflow-hidden">
@@ -377,15 +391,28 @@ export default function PortfolioPage({ navigateTo, onContactClick }: PortfolioP
               <p className="font-sans text-xs text-text-muted text-center md:text-left">
                 專案報告由 達創智能科技 AI 核准發布。保護隱私，真實商業名稱已作去敏。
               </p>
-              <div className="flex gap-3 w-full md:w-auto">
-                <button
-                  onClick={() => {
-                    setSelectedProject(null);
-                    onContactClick();
-                  }}
-                  className="cursor-target w-full md:w-auto px-5 py-2.5 rounded bg-electric-blue hover:shadow-[0_0_15px_rgba(0,163,255,0.3)] hover:brightness-105 transition-all text-brand-bg font-sans font-bold text-xs"
-                >
-                  與本案顧問對談
+              <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+  {selectedProject.demoUrl && (
+    <button
+      type="button"
+      onClick={() => {
+        window.open(selectedProject.demoUrl, '_blank', 'noopener,noreferrer');
+      }}
+      className="cursor-target w-full md:w-auto px-5 py-2.5 rounded bg-transparent border border-electric-blue/50 text-electric-blue hover:bg-electric-blue/10 hover:shadow-[0_0_15px_rgba(0,163,255,0.2)] transition-all font-sans font-bold text-xs"
+    >
+      查看 Demo
+    </button>
+  )}
+
+  <button
+    type="button"
+    onClick={() => {
+      setSelectedProject(null);
+      onContactClick();
+    }}
+    className="cursor-target w-full md:w-auto px-5 py-2.5 rounded bg-electric-blue hover:shadow-[0_0_15px_rgba(0,163,255,0.3)] hover:brightness-105 transition-all text-brand-bg font-sans font-bold text-xs"
+  >
+    與本案顧問對談
                 </button>
               </div>
             </div>
