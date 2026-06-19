@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import brandLogo from '../assets/images/dachuang-logo.png';
-import ShinyText from './ShinyText';
 
 interface NavbarProps {
   currentPath: string;
@@ -94,37 +93,29 @@ export default function Navbar({ currentPath, navigateTo }: NavbarProps) {
         </div>
 
         {/* Desktop Navigation Links */}
-<div className="hidden lg:flex items-center gap-8">
-  {menuItems.map((item) => {
-    const isActive =
-      item.id === 'portfolio' && currentPath === '/portfolio';
+        <div className="hidden lg:flex items-center gap-8">
+          {menuItems.map((item) => {
+            const isActive = 
+              (item.id === 'portfolio' && currentPath === '/portfolio') ||
+              (item.id !== 'portfolio' && currentPath === '/' && false); // Anchor based active tracking not main state
 
-    return (
-      <button
-        key={item.id}
-        onClick={item.action}
-        className={`font-sans font-normal text-[15px] cursor-target hover:text-electric-blue transition-all duration-300 relative py-1 ${
-          isActive ? 'text-electric-blue font-medium' : 'text-text-muted'
-        }`}
-      >
-        <ShinyText
-          text={item.label}
-          speed={2.8}
-          delay={0.2}
-          color={isActive ? '#00A3FF' : '#9CA3AF'}
-          shineColor="#FFFFFF"
-          spread={120}
-          direction="left"
-          pauseOnHover={false}
-          disabled={false}
-        />
-        {isActive && (
-          <span className="absolute bottom-0 left-1/4 right-1/4 h-[2px] bg-electric-blue rounded-full" />
-        )}
-      </button>
-    );
-  })}
-</div>
+            return (
+              <button
+                key={item.id}
+                onClick={item.action}
+                className={`font-sans font-normal text-[15px] cursor-target hover:text-electric-blue transition-all duration-300 relative py-1 ${
+                  isActive ? 'text-electric-blue font-medium' : 'text-text-muted'
+                }`}
+              >
+                {item.label}
+                {isActive && (
+                  <span className="absolute bottom-0 left-1/4 right-1/4 h-[2px] bg-electric-blue rounded-full" />
+                )}
+              </button>
+            );
+          })}
+        </div>
+
         {/* Desktop Quick Trigger CTA Button */}
         <div className="hidden lg:block">
           <button
