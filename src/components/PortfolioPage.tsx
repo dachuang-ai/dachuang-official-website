@@ -15,14 +15,14 @@ export default function PortfolioPage({ navigateTo, onContactClick }: PortfolioP
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
   const categories = [
-    '全部',
-    'AI 整合與自動化',
-    '企業系統建置',
-    '網站與平台',
-    'LMS 線上課程',
-    'SEO / GEO',
-    '品牌與顧問'
-  ];
+  '全部',
+  '企業系統建置',
+  'LMS 線上課程',
+  'AI 整合與自動化',
+  'AI 內容與影音',
+  'SEO / GEO',
+  '品牌官網與平台'
+];
 
   const filteredProjects = selectedCategory === '全部'
     ? PORTFOLIO_PROJECTS_DATA
