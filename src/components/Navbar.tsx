@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import brandLogo from '../assets/dachuang-logo.png';
+import brandLogo from '../assets/images/dachuang-logo.png';
 
 interface NavbarProps {
   currentPath: string;

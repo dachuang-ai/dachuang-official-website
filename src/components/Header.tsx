@@ -5,8 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
-import brandLogo from '../assets/dachuang-logo.png';
-
+import brandLogo from '../assets/images/dachuang-logo.png';
 interface HeaderProps {
   onDiagnoseClick: () => void;
   onNavClick: (sectionId: string) => void;

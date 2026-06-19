@@ -18,7 +18,7 @@ import Navbar from './components/Navbar';
 import TargetCursor from './components/TargetCursor';
 import SolutionCarousel from './components/SolutionCarousel';
 import PortfolioPage from './components/PortfolioPage';
-import brandLogo from './assets/dachuang-logo.png';
+import brandLogo from './assets/images/dachuang-logo.png';
 
 // Static assets data
 import { 
