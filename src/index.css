@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #03060A;
+  --color-brand-bg-dark: #080D14;
+  --color-text-main: #F5F7FA;
+  --color-text-muted: #9AA4B2;
+  --color-brand-silver: #C9D1D9;
+  --color-electric-blue: #00A3FF;
+  --color-deep-blue: #005BFF;
+  
+  --font-sans: "Inter", "Noto Sans TC", sans-serif;
+  --font-display: "Space Grotesk", "Sora", "Noto Sans TC", sans-serif;
+}
+
+html, body {
+  background-color: #03060A;
+  color: #F5F7FA;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom grid mesh & glowing background matrices */
+.bg-tech-grid {
+  background-image: 
+    linear-gradient(rgba(0, 163, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 163, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.bg-tech-radial {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 163, 255, 0.07) 0%, rgba(3, 6, 10, 0) 75%);
+}
+
+.glass-card {
+  background: rgba(8, 13, 20, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 209, 217, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(8, 13, 20, 0.85);
+  border-color: rgba(0, 163, 255, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 163, 255, 0.15), inset 0 0 12px rgba(0, 163, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 163, 255, 0.25);
+}
+
+.glow-blue-lg {
+  box-shadow: 0 0 45px rgba(0, 163, 255, 0.45);
+}
+
+/* Scan line sweep animation */
+@keyframes scanning {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(300%); }
+}
+
+.scan-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 163, 255, 0.4), #00A3FF, rgba(0, 163, 255, 0.4), transparent);
+  position: absolute;
+  left: 0;
+  right: 0;
+  animation: scanning 9s linear infinite;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* Fade In and Fade Out visual flows */
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.35; }
+}
+
+/* Webkit Scrollbars adaptation */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #03060A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #080D14;
+  border-radius: 4px;
+  border: 2px solid #03060A;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00A3FF;
+}
+
+/* Selection aesthetics */
+::selection {
+  background: rgba(0, 163, 255, 0.3);
+  color: #F5F7FA;
+}
+
+/* Digital System Boot & Scanner Animations */
+@keyframes system-boot {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(15px);
+    box-shadow: 0 0 0 rgba(0, 163, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 163, 255, 0.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    box-shadow: 0 0 50px rgba(0, 163, 255, 0.08);
+  }
+}
+
+@keyframes laser-sweep {
+  0% {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500%);
+    opacity: 0;
+  }
+}
+
+.animate-system-boot {
+  animation: system-boot 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-laser-sweep {
+  animation: laser-sweep 4.5s ease-in-out infinite;
+}
+

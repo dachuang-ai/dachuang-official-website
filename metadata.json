@@ -1,0 +1,6 @@
+{
+  "name": "達創智能科技 AI",
+  "description": "達創智能科技 AI 智能系統入口。提供企業流程拆解、AI 顧問、智能模組建置、企業 AI 戰隊與數位行銷整合方案，引導企業探索與重新啟動數位工作流。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

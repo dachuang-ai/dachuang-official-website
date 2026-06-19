@@ -1,0 +1,81 @@
+.target-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: normal; /* Normal mode so that our vibrant electric blue glow is beautifully visible on dark backgrounds */
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.target-cursor-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: #00A3FF;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  box-shadow: 0 0 12px rgba(0, 163, 255, 0.9);
+}
+
+.target-cursor-corner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #00A3FF;
+  will-change: transform;
+  box-shadow: 0 0 12px rgba(0, 163, 255, 0.7);
+  box-sizing: border-box;
+}
+
+.corner-tl {
+  transform: translate(-150%, -150%);
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner-tr {
+  transform: translate(50%, -150%);
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner-br {
+  transform: translate(50%, 50%);
+  border-left: none;
+  border-top: none;
+}
+
+.corner-bl {
+  transform: translate(-150%, 50%);
+  border-right: none;
+  border-top: none;
+}
+
+/* Hide default cursor globally when active */
+.hide-default-cursor,
+.hide-default-cursor * {
+  cursor: none !important;
+}
+
+/* Smooth active styles when snapping */
+.target-cursor-snapped .target-cursor-corner {
+  border-width: 2px;
+  width: 14px;
+  height: 14px;
+  border-color: #00A3FF;
+  box-shadow: 0 0 16px rgba(0, 163, 255, 0.9);
+}
+
+.target-cursor-snapped .target-cursor-dot {
+  background: #00A3FF;
+  box-shadow: 0 0 14px rgba(0, 163, 255, 1);
+}
