@@ -79,14 +79,35 @@ export const SYSTEM_MODULES_DATA: SystemModuleItem[] = [
     id: 'marketing-module',
     title: 'Marketing Module',
     subTitle: '數位整合行銷、主流廣告投放與 LINE 行銷模組',
-    desc: '從廣告點擊到 LINE 社群留存、一條龍規劃品牌引流與裂變工作流。串聯多管道像素，科學化調整投放預算，發揮最高的投資報酬率。',
+    desc: '從廣告點擊到 LINE 社群留存，一條龍規劃品牌引流與轉換工作流。串聯多管道像素，科學化調整投放預算，發揮更穩定的投資回報。',
     features: ['Google & FB 精準受眾再行銷', 'LINE 官方帳號 API 自動化卡片', '行銷像素與數據追蹤漏斗', '全通路廣告數據即時整合']
+  },
+  {
+    id: 'ads-operation-module',
+    title: 'Ads Operation Module',
+    subTitle: 'Google Ads、Meta 廣告代操與成效追蹤優化',
+    desc: '不只是投放廣告，而是讓廣告、網站、SEO / GEO 與轉換追蹤形成同一條成長路徑。從帳戶健檢、素材方向、受眾設定到數據回收，協助企業把預算花在更接近成交的位置。',
+    features: ['Google Ads 廣告帳戶健檢', 'Meta / FB 廣告代操管理', '轉換追蹤與再行銷設定', '廣告成效週期優化建議']
+  },
+  {
+    id: 'verification-module',
+    title: 'Verification Module',
+    subTitle: 'Google Ads、Google 商家與 G2 驗證協助',
+    desc: '協助企業處理 Google Ads 驗證、Google 商家資料驗證與 G2 品牌資料建置，讓品牌具備更完整的可信度訊號，也為搜尋曝光與廣告投放建立穩定基礎。',
+    features: ['Google Ads 驗證流程協助', 'Google 商家資料驗證輔導', 'G2 品牌資料建置規劃', '商家可信度與曝光基礎優化']
+  },
+  {
+    id: 'custom-website-module',
+    title: 'Custom Website Module',
+    subTitle: '客製品牌官網、形象網站與高轉換前台設計',
+    desc: '依照品牌定位、服務內容與搜尋曝光目標，客製打造具備視覺記憶點、SEO 結構與轉換引導的品牌官網。讓網站不只是門面，而是能被搜尋、能被理解、能累積信任的數位資產。',
+    features: ['品牌官網客製設計', 'SEO / GEO 架構預埋', 'RWD 響應式前台開發', 'CTA 轉換路徑規劃']
   },
   {
     id: 'content-module',
     title: 'Content Module',
     subTitle: 'AI 數位虛擬人、短影音腳本與跨平台內容矩陣',
-    desc: '克服真人出鏡痛點。利用 AI 擬真數位分身製作教育訓練、品牌週宣與產品提案影片，極速克隆聲音與動作，產能成倍躍昇。',
+    desc: '克服真人出鏡痛點。利用 AI 擬真數位分身製作教育訓練、品牌宣傳與產品提案影片，快速生成腳本、聲音與視覺素材，讓內容產能成倍提升。',
     features: ['擬真虛擬主播克隆輸出', '多語系口音自動編譯與生成', 'AI 精準分鏡影音大綱規劃', '跨平台高產社群影片調研']
   }
 ];
