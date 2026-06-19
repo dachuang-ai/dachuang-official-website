@@ -190,22 +190,24 @@ export default function App() {
                 </div>
 
                 <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-main tracking-tight leading-tight md:leading-[1.08]">
-  達創智能科技 AI
+  讓企業被 Google 找到
   <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-electric-blue via-[#468DFE] to-brand-silver">
-    Google × AI 搜尋成長入口
+    也被 AI 搜尋引用
   </span>
 </h1>
 
                 {/* Subtitle with proper line formatting */}
-                <p className="font-sans text-base md:text-[19px] text-text-main mt-6 max-w-xl leading-relaxed mx-auto lg:mx-0 font-medium opacity-95">
-                  不是每一套系統一開始都看得見。<br />
-                  但每一家企業，都有值得被重新啟動的可能。
-                </p>
+                <p className="font-sans text-base md:text-[19px] text-text-main mt-6 max-w-2xl leading-relaxed mx-auto lg:mx-0 font-medium opacity-95">
+  整合 AI 系統、SEO / GEO、廣告代操與客製網站
+  <br />
+  讓品牌從內部流程到外部曝光，形成可累積的成長資產。
+</p>
 
-                <p className="font-sans text-sm sm:text-[15px] text-text-muted mt-4 max-w-xl leading-relaxed mx-auto lg:mx-0">
-                  我們用 AI、系統、自動化與數位技術，<br />
-                  協助企業找到下一個成長入口。
-                </p>
+<p className="font-sans text-sm sm:text-[15px] text-text-muted mt-4 max-w-xl leading-relaxed mx-auto lg:mx-0">
+  從搜尋曝光、商家驗證、網站轉換到企業流程自動化，
+  <br />
+  讓你的品牌不只被看見，也能被理解與信任。
+</p>
 
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mt-9 w-full sm:w-auto">
@@ -213,13 +215,13 @@ export default function App() {
                     onClick={handleScrollToContact}
                     className="cursor-target w-full sm:w-auto px-8 py-3.5 rounded-md font-sans font-medium text-xs tracking-wider uppercase bg-electric-blue text-brand-bg font-bold hover:shadow-[0_0_25px_rgba(0,163,255,0.4)] hover:brightness-110 active:scale-95 transition-all duration-300"
                   >
-                    啟動探索
+                    啟動諮詢
                   </button>
                   <button
                     onClick={() => navigateTo('/portfolio')}
                     className="cursor-target w-full sm:w-auto px-8 py-3.5 rounded-md font-sans font-medium text-xs tracking-wider uppercase bg-white/[0.03] border border-brand-silver/20 text-text-main hover:border-electric-blue hover:text-electric-blue hover:bg-electric-blue/5 active:scale-95 transition-all duration-300"
                   >
-                    查看作品集
+                    查看服務案例
                   </button>
                 </div>
               </div>
