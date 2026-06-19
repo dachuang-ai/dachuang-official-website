@@ -19,6 +19,7 @@ import TargetCursor from './components/TargetCursor';
 import SolutionCarousel from './components/SolutionCarousel';
 import PortfolioPage from './components/PortfolioPage';
 import Galaxy from './components/Galaxy';
+import SafeRotatingText from './components/SafeRotatingText';
 import brandLogo from './assets/images/dachuang-logo.png';
 
 // Static assets data
@@ -191,8 +192,17 @@ export default function App() {
 
                 <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-text-main tracking-tight leading-tight md:leading-[1.08]">
   讓企業被 Google 找到
-  <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-electric-blue via-[#468DFE] to-brand-silver">
-    也被 AI 搜尋引用
+  <span className="block mt-2">
+    同時讓
+    <SafeRotatingText
+      words={[
+        'AI 搜尋引用',
+        'SEO / GEO 看見',
+        'Google Ads 放大',
+        '客製網站承接',
+        '品牌信任累積',
+      ]}
+    />
   </span>
 </h1>
 
