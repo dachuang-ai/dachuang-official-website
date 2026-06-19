@@ -18,6 +18,7 @@ import Navbar from './components/Navbar';
 import TargetCursor from './components/TargetCursor';
 import SolutionCarousel from './components/SolutionCarousel';
 import PortfolioPage from './components/PortfolioPage';
+import Galaxy from './components/Galaxy';
 import brandLogo from './assets/images/dachuang-logo.png';
 
 // Static assets data
@@ -129,6 +130,23 @@ export default function App() {
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-brand-bg-dark to-transparent pointer-events-none" />
             <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-electric-blue/5 rounded-full blur-[150px] pointer-events-none" />
             <div className="absolute inset-0 bg-tech-grid opacity-15 pointer-events-none" />
+            <div className="absolute inset-0 z-0 opacity-55 pointer-events-auto">
+  <Galaxy
+    mouseRepulsion
+    mouseInteraction
+    density={0.75}
+    glowIntensity={0.28}
+    saturation={0}
+    hueShift={140}
+    twinkleIntensity={0.28}
+    rotationSpeed={0.06}
+    repulsionStrength={1.6}
+    autoCenterRepulsion={0}
+    starSpeed={0.35}
+    speed={0.8}
+    transparent
+  />
+</div>
 
             {/* Glowing sweep line */}
             <div className="scan-line" />
