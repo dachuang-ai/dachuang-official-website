@@ -100,6 +100,107 @@ export default function App() {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
+    };
+
+  const LegalPage = ({ type }: { type: 'privacy' | 'terms' }) => {
+    const isPrivacy = type === 'privacy';
+
+    return (
+      <main className="min-h-screen bg-brand-bg-dark pt-28 pb-24">
+        <section className="max-w-4xl mx-auto px-5 md:px-10">
+          <div className="glass-card rounded-2xl border border-white/[0.06] p-8 md:p-12">
+            <div className="font-mono text-xs tracking-widest text-electric-blue uppercase mb-4">
+              {isPrivacy ? 'PRIVACY POLICY // 隱私權政策' : 'TERMS OF SERVICE // 服務條款'}
+            </div>
+
+            <h1 className="font-display font-medium text-3xl md:text-4xl text-text-main mb-6">
+              {isPrivacy ? '隱私權政策' : '服務條款'}
+            </h1>
+
+            {isPrivacy ? (
+              <div className="space-y-6 font-sans text-sm md:text-base text-text-muted leading-relaxed">
+                <p>
+                  達創智能科技 AI 重視您的個人資料與隱私保護。本政策說明當您透過本網站填寫表單、聯繫我們或使用相關服務時，我們如何蒐集、使用與保護您的資料。
+                </p>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">一、資料蒐集項目</h2>
+                  <p>我們可能蒐集您主動提供的姓名、公司名稱、電話、LINE ID、Email、需求內容與其他聯絡資訊。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">二、資料使用目的</h2>
+                  <p>上述資料僅用於需求回覆、服務諮詢、專案評估、後續聯繫與提供相關服務，不會任意出售、交換或提供給無關第三方。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">三、資料保存與保護</h2>
+                  <p>我們將以合理方式保存您提供的資料，並採取必要措施避免未經授權的存取、洩漏或不當使用。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">四、第三方服務</h2>
+                  <p>本網站可能使用 Google Maps、表單寄送服務、網站代管平台或其他第三方工具。相關服務可能依其自身政策處理必要技術資料。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">五、聯絡我們</h2>
+                  <p>如您希望查詢、更正或刪除個人資料，可透過 Email 與我們聯繫：nh071788@gmail.com。</p>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-6 font-sans text-sm md:text-base text-text-muted leading-relaxed">
+                <p>
+                  歡迎使用達創智能科技 AI 網站。本條款說明您瀏覽本網站、提交需求表單或與我們進行服務洽詢時的基本使用規範。
+                </p>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">一、網站資訊用途</h2>
+                  <p>本網站所呈現之服務內容、案例、Demo 與說明文字，僅供初步了解與合作洽詢參考，實際服務範圍以雙方後續確認之報價、合約或書面紀錄為準。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">二、服務洽詢</h2>
+                  <p>您透過表單提交需求後，代表您同意我們依照您提供的聯絡方式與您進行後續需求確認與服務溝通。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">三、智慧財產權</h2>
+                  <p>本網站之文字、視覺設計、品牌素材、頁面架構與相關內容，除另有註明外，均屬達創智能科技 AI 或相關權利人所有，未經授權不得任意重製或商業使用。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">四、責任限制</h2>
+                  <p>本網站將盡力維持資訊正確與服務穩定，但不保證所有內容於任何時間皆完全無誤或不中斷。如因第三方服務、網路環境或不可抗力造成影響，本網站不負超出合理範圍之責任。</p>
+                </div>
+
+                <div>
+                  <h2 className="text-text-main font-medium mb-2">五、條款調整</h2>
+                  <p>我們保留依實際營運需要調整本條款之權利，更新後將公布於本網站頁面。</p>
+                </div>
+              </div>
+            )}
+
+            <div className="mt-10 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row gap-3">
+              <button
+                type="button"
+                onClick={() => navigateTo('/')}
+                className="cursor-target px-6 py-3 rounded bg-electric-blue text-brand-bg font-sans font-bold text-xs hover:brightness-110 transition-all"
+              >
+                返回首頁
+              </button>
+              <button
+                type="button"
+                onClick={handleScrollToContact}
+                className="cursor-target px-6 py-3 rounded border border-electric-blue/40 text-electric-blue font-sans font-bold text-xs hover:bg-electric-blue/10 transition-all"
+              >
+                聯絡達創
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    );
   };
 
   return (
@@ -116,11 +217,15 @@ export default function App() {
       {/* Floating Translucent Navigation Desk */}
       <Navbar currentPath={currentPath} navigateTo={navigateTo} />
 
-      {/* RENDER LOGIC: Conditionally mount Main Home Page or Portfolio Page */}
-      {currentPath === '/portfolio' ? (
-        <PortfolioPage navigateTo={navigateTo} onContactClick={handleScrollToContact} />
-      ) : (
-        <main id="homepage-main">
+      {/* RENDER LOGIC: Conditionally mount Main Home Page, Portfolio Page or Legal Pages */}
+{currentPath === '/portfolio' ? (
+  <PortfolioPage navigateTo={navigateTo} onContactClick={handleScrollToContact} />
+) : currentPath === '/privacy' ? (
+  <LegalPage type="privacy" />
+) : currentPath === '/terms' ? (
+  <LegalPage type="terms" />
+) : (
+  <main id="homepage-main">
           
           {/* SECTION 01: ENTER DACHUANG (SYSTEM BOOT HERO) */}
           <section
@@ -944,7 +1049,17 @@ export default function App() {
                         className="w-full bg-brand-bg-dark border border-white/10 rounded px-4 py-3 text-sm text-text-main placeholder:text-text-muted/30 focus:border-electric-blue focus:outline-none transition-all cursor-target"
                       />
                     </div>
-
+                    <p className="text-[11px] md:text-xs text-text-muted leading-relaxed border-t border-white/[0.04] pt-4">
+  送出表單即表示您同意達創智能科技 AI 依
+  <button
+    type="button"
+    onClick={() => navigateTo('/privacy')}
+    className="text-electric-blue hover:underline mx-1"
+  >
+    隱私權政策
+  </button>
+  蒐集與使用您提供的聯絡資料，作為需求回覆與服務溝通用途。
+</p>
                     {/* Form submit terminal button */}
                     <div className="pt-4 flex justify-end">
                       <button
@@ -1043,11 +1158,30 @@ export default function App() {
           </div>
 
           <div className="font-sans text-[12px] text-text-muted text-center md:text-right leading-relaxed">
-            <div>彭俊達｜總監　0965-607-101　nh071788@gmail.com</div>
-            <div>服務據點｜台中南屯　台中市南屯區忠勇路107-11號1樓</div>
-            <div className="font-mono text-[10px] text-white/20 mt-1">
-              © {new Date().getFullYear()} DACHUANG AI. ALL RIGHTS RESERVED.
-            </div>
+           <div>彭俊達｜總監　0965-607-101　nh071788@gmail.com</div>
+<div>服務據點｜台中南屯　台中市南屯區忠勇路107-11號1樓</div>
+
+<div className="flex justify-center md:justify-end gap-3 mt-2">
+  <button
+    type="button"
+    onClick={() => navigateTo('/privacy')}
+    className="text-electric-blue/80 hover:text-electric-blue hover:underline"
+  >
+    隱私權政策
+  </button>
+  <span className="text-white/15">｜</span>
+  <button
+    type="button"
+    onClick={() => navigateTo('/terms')}
+    className="text-electric-blue/80 hover:text-electric-blue hover:underline"
+  >
+    服務條款
+  </button>
+</div>
+
+<div className="font-mono text-[10px] text-white/20 mt-1">
+  © {new Date().getFullYear()} DACHUANG AI. ALL RIGHTS RESERVED.
+</div>
           </div>
 
         </div>
