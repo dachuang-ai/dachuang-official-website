@@ -64,13 +64,47 @@ export default function App() {
     }
   };
 
-  const handleFormSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email) {
-      return;
-    }
-    setIsFormSubmitted(true);
+  const handleFormSubmit = async (e: FormEvent) => {
+  e.preventDefault();
+
+  if (!formData.name || !formData.email) {
+    return;
+  }
+
+  const payload = {
+    access_key: 'f67e60b3-393b-4be9-b731-5f06c7377363',
+    subject: '達創智能科技 AI｜官網新需求表單',
+    from_name: '達創智能科技 AI 官網',
+    name: formData.name,
+    company: formData.company,
+    phone_or_line: formData.phone,
+    email: formData.email,
+    needs: formData.needs.join('、'),
+    message: formData.message,
+    page_url: window.location.href,
   };
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setIsFormSubmitted(true);
+    } else {
+      alert('表單送出失敗，請稍後再試，或直接聯繫達創智能科技。');
+    }
+  } catch (error) {
+    alert('表單送出失敗，請確認網路連線後再試。');
+  }
+};
 
   const resetForm = () => {
     setFormData({
